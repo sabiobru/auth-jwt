@@ -1,5 +1,8 @@
 # AuthJtw
 
+![image](https://github.com/sabiobru/auth-jwt/assets/45543767/9ac28bbe-6771-4b13-8eb0-8b598327b4ad)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
 ## Development server
