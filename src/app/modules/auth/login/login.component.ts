@@ -1,3 +1,4 @@
+//modules/auth/login/login.component
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { Router } from '@angular/router'; // Importe o Router
@@ -13,8 +14,18 @@ export class LoginComponent {
     username: '',
     password: ''
   };
+  isLoggedIn: boolean = false;
+  username: any = '';
+  constructor(private authService: AuthService, private router: Router) {
+    this.updateLoginStatus();
+  }
 
-  constructor(private authService: AuthService, private router: Router) {}
+  private updateLoginStatus(): void {
+    this.isLoggedIn = this.authService.isAuthenticated();
+    if (this.isLoggedIn) {
+      this.username = this.authService.getUsername();
+    }
+  }
 
   login(): void {
     this.authService.login(this.credentials).subscribe(
@@ -30,10 +41,13 @@ export class LoginComponent {
       }
     );
   }
-
+  register(): void {
+    this.router.navigate(['/auth/register']);
+  }
 
   logout(): void {
-    this.authService.logout(); // Chama o método de logout do AuthService
-    this.router.navigate(['/login']); // Redireciona para a página de login após o logout
+    this.authService.logout();
+    this.updateLoginStatus();
+    this.router.navigate(['/auth']);
   }
 }
