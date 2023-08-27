@@ -1,5 +1,16 @@
-<footer class="footer fixed-bottom mt-auto py-3 bg-light">
-  <div class="container text-center">
-    <span class="text-muted">Seu texto de direitos autorais ou informações do projeto aqui.</span>
+<div *ngIf="!isLogged" class="footer fixed-bottom">
+  <div class="container-fluid">
+  <div class="row">
+    <footer class="col-12 bg-dark text-white pt-4 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>&copy; 2023 Auth JWT. Todos os direitos reservados. | Autor: <a target="_blank" class="text-light" href="https://www.linkedin.com/in/brunosabio/">Bruno Sábio</a> </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
-</footer>
+</div>
+</div>
+
