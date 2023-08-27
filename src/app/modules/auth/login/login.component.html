@@ -1,10 +1,11 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Login</h2>
-          <form (ngSubmit)="login()">
+    <div class="col-md-4">
+      <div class="card card-login shadow-sm">
+        <div class="card-body my-3">
+          <form class="container" (ngSubmit)="login()">
+            <h2 class="card-title text-center">Login</h2>
+            <hr class="text-light">
             <div class="mb-3">
               <label for="username" class="form-label">Username:</label>
               <input type="text" id="username" [(ngModel)]="credentials.username" name="username" class="form-control" required>
@@ -13,8 +14,15 @@
               <label for="password" class="form-label">Password:</label>
               <input type="password" id="password" [(ngModel)]="credentials.password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary me-2">Login</button>
-            <button class="btn btn-secondary" (click)="register()">Register</button>
+            <hr class="text-light">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-dark w-100 shadow-sm">Login</button>
+              </div>
+              <div class="col-md-6">
+                <button class="btn btn-secondary w-100 shadow-sm" (click)="register()">Register</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

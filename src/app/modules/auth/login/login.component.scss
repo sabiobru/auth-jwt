@@ -1,18 +1,18 @@
 /* modules/auth/login.component.scss */
 .login-container {
-  max-width: 300px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f5f5f5;
+  max-width       : 300px;
+  margin          : auto;
+  padding         : 20px;
+  border          : 1px solid #ccc;
+  border-radius   : 5px;
+  background-color: #212529;
 
   h2 {
     text-align: center;
   }
 
   form {
-    display: flex;
+    display       : flex;
     flex-direction: column;
 
     label {
@@ -21,16 +21,22 @@
 
     input {
       margin-bottom: 10px;
-      padding: 5px;
+      padding      : 5px;
     }
 
     button {
-      align-self: flex-end;
-      padding: 5px 10px;
+      align-self      : flex-end;
+      padding         : 5px 10px;
       background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
+      color           : white;
+      border          : none;
+      cursor          : pointer;
     }
   }
+}
+
+.card-login {
+  background-color: rgb(75 75 75 / 49%);
+  color           : white;
+  text-shadow     : 2px 2px 3px black;
 }

@@ -3,3 +3,10 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+body{
+  background-color: #3e454d !important;
+  background-image: url('./assets/images/background.jpg');
+  background-position: center;
+  background-size: cover;
+}
