@@ -1,30 +1,58 @@
-# AuthJtw
 
-![image](https://github.com/sabiobru/auth-jwt/assets/45543767/9ac28bbe-6771-4b13-8eb0-8b598327b4ad)
+# Auth JWT - Projeto de Autenticação com Token JWT
 
+O projeto Auth JWT é uma aplicação Angular que simula a autenticação com token JWT (JSON Web Token) utilizando o JSON Server como uma API de backend. Ele é construído com o intuito de demonstrar o uso de conceitos como Guards, Services, Interceptors, Local Storage e comunicação com uma API REST.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+## Configuração Adicional
 
-## Development server
+Para executar o projeto corretamente, é necessário configurar o ambiente para emular o backend utilizando o JSON Server. Siga as instruções abaixo:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Passo 1: Instalar o JSON Server
 
-## Code scaffolding
+Certifique-se de ter o Node.js instalado em seu sistema. Caso não tenha, você pode fazer o download e instalá-lo a partir do [site oficial do Node.js](https://nodejs.org/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Abra o terminal na pasta raiz do projeto e execute o seguinte comando para instalar globalmente o JSON Server:
 
-## Build
+```bash
+npm install -g json-server
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Passo 2: Executar o JSON Server
 
-## Running unit tests
+No terminal, dentro da pasta raiz do projeto, execute o seguinte comando para iniciar o JSON Server e simular o backend:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+json-server --watch db.json
+```
 
-## Running end-to-end tests
+Isso iniciará o JSON Server e utilizará o arquivo `db.json` como fonte de dados para simular as operações da API.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Executando o Projeto Angular
 
-## Further help
+Após configurar o JSON Server, você pode iniciar a execução do projeto Angular. Certifique-se de ter o Angular CLI instalado. Se não tiver, você pode instalá-lo globalmente com o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install -g @angular/cli
+```
+
+Agora você pode iniciar a aplicação Angular. No terminal, dentro da pasta raiz do projeto, execute os seguintes comandos:
+
+```bash
+npm install
+ng serve
+```
+
+Isso instalará as dependências do projeto e iniciará a aplicação Angular. Você pode acessar a aplicação no seu navegador através da URL [http://localhost:4200/](http://localhost:4200/).
+
+Lembre-se de que a aplicação utilizará o JSON Server como backend emulado, portanto, certifique-se de manter o JSON Server em execução enquanto testa a aplicação.
+
+## Contribuindo
+
+Se você deseja contribuir com este projeto, sinta-se à vontade para criar um fork do repositório, fazer as alterações desejadas e enviar um pull request. Suas contribuições são bem-vindas!
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão em relação a este projeto, você pode entrar em contato através do [repositório no GitHub](https://github.com/sabiobru/auth-jwt).
+
+**Divirta-se explorando e aprendendo com o projeto Auth JWT!**
+```
