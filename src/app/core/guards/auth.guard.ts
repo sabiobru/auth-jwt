@@ -13,7 +13,7 @@ export class AuthGuard{
     if (this.authService.isAuthenticated()) {
       return true;
     } else {
-      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+      this.router.navigate(['/auth'], { queryParams: { returnUrl: state.url } });
       return false;
     }
   }

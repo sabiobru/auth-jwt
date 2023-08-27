@@ -1,0 +1,42 @@
+/* modules/auth/login.component.scss */
+.login-container {
+  max-width       : 300px;
+  margin          : auto;
+  padding         : 20px;
+  border          : 1px solid #ccc;
+  border-radius   : 5px;
+  background-color: #212529;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display       : flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding      : 5px;
+    }
+
+    button {
+      align-self      : flex-end;
+      padding         : 5px 10px;
+      background-color: #007bff;
+      color           : white;
+      border          : none;
+      cursor          : pointer;
+    }
+  }
+}
+
+.card-subscribe {
+  background-color: rgb(75 75 75 / 60%);
+  color           : white;
+  text-shadow     : 2px 2px 4px black;
+}
