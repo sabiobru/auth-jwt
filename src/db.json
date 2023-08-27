@@ -1,0 +1,6 @@
+
+{
+  "users": [
+    { "id": 1, "username": "brunosabio", "password": "123", "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImJydW5vc2FiaW8iLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjkzMTI5NDM3LCJleHAiOjE2OTMxMzMwMzd9.slWrZ4g2rKVrImXaiYEOIXE2Pp18ay1U41QCRRORbnM" }
+  ]
+}
