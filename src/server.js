@@ -32,6 +32,30 @@ function generateToken(user) {
 }
 
 /**
+ * Rota para obter o nome de usuário associado ao token.
+ *
+ * @param {object} req - O objeto da requisição.
+ * @param {object} res - O objeto da resposta.
+ * @returns {object} A resposta com o nome de usuário ou mensagem de erro.
+ */
+server.get('/username', async (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1];
+    const decodedToken = jwt.verify(token, config.secret);
+
+    const user = router.db.get('users').find({ id: decodedToken.id }).value();
+    if (!user) {
+      return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+
+    return res.json({ username: user.username });
+  } catch (error) {
+    console.error('Error during getting username:', error);
+    return res.status(500).json({ error: 'Erro ao obter o nome de usuário' });
+  }
+});
+
+/**
  * Rota para autenticar um usuário.
  *
  * @param {object} req - O objeto da requisição.
