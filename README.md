@@ -3,7 +3,42 @@
 
 O projeto Auth JWT é uma aplicação Angular que simula a autenticação com token JWT (JSON Web Token) utilizando o JSON Server como uma API de backend. Ele é construído com o intuito de demonstrar o uso de conceitos como Guards, Services, Interceptors, Local Storage e comunicação com uma API REST.
 
+## Estrutura do Projeto 
+
+O projeto Auth JWT segue uma arquitetura organizada para melhor escalabilidade e manutenção do código:
+
+### Core Module
+
+O Core Module contém serviços, interceptors, modelos e guardas compartilhados em todo o aplicativo. Isso ajuda a manter a lógica central em um local facilmente acessível.
+
+### Shared Module
+
+O Shared Module contém componentes reutilizáveis, diretivas e pipes compartilhados entre módulos diferentes. Isso promove a reutilização de código e mantém a consistência visual.
+
+### Feature Modules
+
+Cada recurso é colocado em seu próprio módulo, com seus próprios componentes, serviços e outras funcionalidades específicas. Isso facilita a escalabilidade do aplicativo.
+
+### Layout Module
+
+O Layout Module contém componentes relacionados à estrutura da página, como cabeçalho e rodapé.
+
+### App Module
+
+O App Module é o módulo raiz que importa todos os outros módulos e define o componente principal.
+
+### App Routing Module
+
+O App Routing Module gerencia as rotas do aplicativo, conectando URLs a componentes específicos.
+
+### Outros Diretórios
+
+- **assets**: Contém recursos estáticos, como imagens e arquivos CSS.
+- **environments**: Armazena arquivos de configuração para diferentes ambientes (desenvolvimento, produção, etc.).
+
 ## Configuração Adicional
+
+Para executar o projeto corretamente, siga as instruções abaixo:
 
 Para executar o projeto corretamente, é necessário configurar o ambiente para emular o backend utilizando o JSON Server. Siga as instruções abaixo:
 
